@@ -16,7 +16,7 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/your-org/your-repo.git
+        repoURL: https://github.com/mi-albr/argocd-workshop.git
         targetRevision: HEAD
         path: "{{path}}/dev/"
 #        helm:
