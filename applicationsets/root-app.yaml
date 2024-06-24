@@ -18,7 +18,7 @@ spec:
       source:
         repoURL: https://github.com/your-org/your-repo.git
         targetRevision: HEAD
-        path: "{{path}}/dev"
+        path: "{{path}}/dev/"
 #        helm:
 #          valueFiles:
 #          - values.yaml
