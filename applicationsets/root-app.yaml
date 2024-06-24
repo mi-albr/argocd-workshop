@@ -36,7 +36,7 @@ spec:
         repoURL: https://github.com/mi-albr/argocd-workshop.git
         revision: main
         directories:
-          - path: "applicationset/helm/*"
+          - path: "applicationsets/helm/*"
   template:
     metadata:
       name: "{{path.basename}}"
