@@ -9,7 +9,7 @@ spec:
         revision: HEAD
         directories:
           - path: applicationsets/apps/kustomize/*
-          #- path: applicationsets/apps/helm/*
+          - path: applicationsets/apps/helm/*
   template:
     metadata:
       name: "{{path.basename}}-as"
@@ -19,9 +19,9 @@ spec:
         repoURL: https://github.com/mi-albr/argocd-workshop.git
         targetRevision: HEAD
         path: "{{path}}/dev/"
-#        helm:
-#          valueFiles:
-#          - values.yaml
+        helm:
+          valueFiles:
+          - values.yaml
       destination:
         server: https://kubernetes.default.svc
         namespace: "{{path.basename}}"
