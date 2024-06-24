@@ -1,3 +1,4 @@
-resources:
+bases:
   - ../../base/kustomize-app.yaml
+resources:
   - helm-app.yaml
