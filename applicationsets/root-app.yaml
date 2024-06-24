@@ -17,7 +17,7 @@ spec:
       project: default
       source:
         repoURL: https://github.com/your-org/your-repo.git
-        targetRevision: main
+        targetRevision: HEAD
         path: "{{path}}/overlays/dev"
 #        helm:
 #          valueFiles:
@@ -48,7 +48,7 @@ spec:
 #      project: default
 #      source:
 #        repoURL: https://github.com/mi-albr/argocd-workshop.git
-#        targetRevision: main
+#        targetRevision: HEAD
 #        chart: "{{path}}"
 #        helm:
 #          valueFiles:
