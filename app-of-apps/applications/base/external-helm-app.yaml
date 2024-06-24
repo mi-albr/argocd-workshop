@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: helm-app
+spec:
+  project: default
+  source:
+    repoURL: 'https://charts.bitnami.com/bitnami' # External Helm repo URL
+    chart: nginx
+    targetRevision: 8.9.1 # Specific version of the chart
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

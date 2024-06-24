@@ -1,0 +1,3 @@
+resources:
+  - kustomize-app.yaml
+  - helm-app.yaml

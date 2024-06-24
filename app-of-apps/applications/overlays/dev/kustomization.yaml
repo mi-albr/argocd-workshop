@@ -1,0 +1,3 @@
+resources:
+  - ../../base/kustomize-app.yaml
+  - ../../base/helm-app.yaml

@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: helm-app-prod
+spec:
+  project: default
+  source:
+    repoURL: 'https://charts.bitnami.com/bitnami' # External Helm repo URL
+    chart: nginx
+    targetRevision: 8.9.1
+    helm:
+      valueFiles:
+        - values-prod.yaml # This file should exist in the repository
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
