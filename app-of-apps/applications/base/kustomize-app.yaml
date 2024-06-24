@@ -6,8 +6,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/your-repo/argo-cd-app-of-apps-example.git'
-    path: apps/kustomize-app/base
+    repoURL: 'https://github.com/mi-albr/argocd-workshop.git'
+    path: app-of-apps/apps/kustomize-app/base
     targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'
