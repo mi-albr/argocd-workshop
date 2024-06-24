@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/your-repo/argo-cd-app-of-apps-example.git'
+    repoURL: 'https://github.com/mi-albr/argocd-workshop.git'
     path: applications/overlays/dev
     targetRevision: HEAD
   destination:
