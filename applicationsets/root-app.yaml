@@ -29,34 +29,34 @@ spec:
         automated:
           prune: true
           selfHeal: true
----
-apiVersion: argoproj.io/v1alpha1
-kind: ApplicationSet
-metadata:
-  name: my-helm-applicationset
-spec:
-  generators:
-    - git:
-        repoURL: https://github.com/mi-albr/argocd-workshop.git
-        revision: main
-        directories:
-          - path: "applicationsets/apps/helm/*"
-  template:
-    metadata:
-      name: "{{path.basename}}"
-    spec:
-      project: default
-      source:
-        repoURL: https://github.com/mi-albr/argocd-workshop.git
-        targetRevision: main
-        chart: "{{path}}"
-        helm:
-          valueFiles:
-            - values.yaml
-      destination:
-        server: https://kubernetes.default.svc
-        namespace: "{{path.basename}}"
-      syncPolicy:
-        automated:
-          prune: true
-          selfHeal: true
+#---
+#apiVersion: argoproj.io/v1alpha1
+#kind: ApplicationSet
+#metadata:
+#  name: my-helm-applicationset
+#spec:
+#  generators:
+#    - git:
+#        repoURL: https://github.com/mi-albr/argocd-workshop.git
+#        revision: main
+#        directories:
+#          - path: "applicationsets/apps/helm/*"
+#  template:
+#    metadata:
+#      name: "{{path.basename}}"
+#    spec:
+#      project: default
+#      source:
+#        repoURL: https://github.com/mi-albr/argocd-workshop.git
+#        targetRevision: main
+#        chart: "{{path}}"
+#        helm:
+#          valueFiles:
+#            - values.yaml
+#      destination:
+#        server: https://kubernetes.default.svc
+#        namespace: "{{path.basename}}"
+#      syncPolicy:
+#        automated:
+#          prune: true
+#          selfHeal: true
