@@ -8,17 +8,17 @@ spec:
         repoURL: https://github.com/mi-albr/argocd-workshop.git
         revision: HEAD
         directories:
-          - path: applicationsets/apps/kustomize/*/dev
+          - path: applicationsets/apps/kustomize/*
           #- path: applicationsets/apps/helm/*
   template:
     metadata:
-      name: "{{path.basename}}"
+      name: "{{path.basename}}-as"
     spec:
       project: default
       source:
         repoURL: https://github.com/your-org/your-repo.git
         targetRevision: HEAD
-        path: "{{path}}"
+        path: "{{path}}/dev"
 #        helm:
 #          valueFiles:
 #          - values.yaml
