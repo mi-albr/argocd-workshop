@@ -8,7 +8,7 @@ spec:
         repoURL: https://github.com/mi-albr/argocd-workshop.git
         revision: HEAD
         directories:
-          - path: applicationsets/apps/kustomize/*
+          - path: applicationsets/apps/kustomize/*/dev
           #- path: applicationsets/apps/helm/*
   template:
     metadata:
